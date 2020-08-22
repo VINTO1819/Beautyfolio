@@ -1,0 +1,30 @@
+{
+  "name": "beautyfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "build:page": "tsc && node ./dist/app.js",
+    "apply": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VINTO1819/Beautyfolio.git"
+  },
+  "author": "VINTO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VINTO1819/Beautyfolio/issues"
+  },
+  "homepage": "https://github.com/VINTO1819/Beautyfolio#readme",
+  "dependencies": {
+    "@types/ejs": "^3.0.4",
+    "@types/node": "^14.6.0",
+    "ejs": "^3.1.5",
+    "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1"
+  }
+}

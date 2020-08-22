@@ -1,0 +1,23 @@
+{   
+    "Title":"HTML Title",
+    "Slogan":"Your Slogan here",
+    "Greetings":"Your Greetings Here",
+    "Avatar":"Your Avatar Here",
+    "Favicon":"Your Favicon Here",
+    "Stacks":[
+        {
+            "Title":"Your Stack Name Here.", 
+            "Description":"Description Here", 
+            "Image":"Your Image Here", "SkillPercent":0
+        }
+    ],
+    "Projects":[
+        {"Type":"Large/Small/Contributed","Title":"Your Title here", "SubTitle":"Your Subtitle here", 
+            "Description":"Your Description here",
+            "CoverImage":"Your Project Cover Image here", 
+            "Links":[
+                {"Icon":"Your Icon here", "URL":"Your URL here"}
+            ], "RoleList":["Your Roles or Project's features here"]
+        }
+    ]
+}
