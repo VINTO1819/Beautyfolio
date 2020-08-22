@@ -22,5 +22,6 @@ Beautyfolio 활용 예시
 
 Beautyfolio 템플릿 목록
 --------------
- * [Default Template](https://github.com/VINTO1819/Beautyfolio/tree/master/Templates/Default)
+ * [Default Template(Official)](https://github.com/VINTO1819/Beautyfolio/tree/master/Templates/Default)
+ * [Visualize(Official)](https://github.com/VINTO1819/Beautyfolio-Templates/tree/master/Visualize)
  * 새로운 템플릿을 만드셨다면 Pull Request를 통해 Respository를 공유해주세요!
