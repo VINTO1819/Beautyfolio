@@ -23,7 +23,7 @@ const Data:ejs.Data = {
         Stacks:Dataset.Stacks,
         URL:Dataset.URL,
         Projects:{
-            All:Dataset.Projects as Array<any>,
+            All:Array<any>().concat((Dataset.Projects as Array<any>).filter(it => it.Type == "Large")).concat((Dataset.Projects as Array<any>).filter(it => it.Type == "Small")).concat((Dataset.Projects as Array<any>).filter(it => it.Type == "Contributed")),
             Large:(Dataset.Projects as Array<any>).filter(it => it.Type == "Large"),
             Small:(Dataset.Projects as Array<any>).filter(it => it.Type == "Small"),
             Contributed:(Dataset.Projects as Array<any>).filter(it => it.Type == "Contributed")
