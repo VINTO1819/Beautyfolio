@@ -4,6 +4,9 @@
     "Greetings":"Your Greetings Here",
     "Avatar":"Your Avatar Here",
     "Favicon":"Your Favicon Here",
+    "URL":[
+        {"Type":"Your Url type here", "Url":"Url here"}
+    ],
     "Stacks":[
         {
             "Title":"Your Stack Name Here.", 

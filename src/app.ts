@@ -21,6 +21,7 @@ const Data:ejs.Data = {
         Avatar:Dataset.Avatar,
         Favicon:Dataset.Favicon,
         Stacks:Dataset.Stacks,
+        URL:Dataset.URL,
         Projects:{
             All:Dataset.Projects as Array<any>,
             Large:(Dataset.Projects as Array<any>).filter(it => it.Type == "Large"),
