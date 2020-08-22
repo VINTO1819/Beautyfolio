@@ -1,0 +1,219 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%- Data.Title %></title>
+    <meta name="Nova theme" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="UserAssets/<%- Data.Favicon %>"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+
+<body>
+
+<!-- Navigation
+    ================================================== -->
+<div class="hero-background">
+    <div class="container">
+        <div class="header-container header">
+            <a class="navbar-brand logo" href="#"> <img class="logo" src="UserAssets/<%- Data.Favicon %>"/> </a>
+            <div class="header-right">
+                <a class="navbar-item" href="#stacks">Stacks</a>
+                <a class="navbar-item" href="#project">Projects</a>
+            </div>
+        </div>
+        <!--navigation-->
+
+
+        <!-- Hero-Section
+          ================================================== -->
+
+        <div class="hero row">
+            <div class="hero-right col-sm-6 col-sm-6">
+                <h1 class="header-headline bold"> <%- Data.Slogan %></h1>
+                <h4 class="header-running-text light"> <%- Data.Greetings %></h4>
+                <a href="https://github.com/<%- Data.ID %>">
+                    <button class="hero-btn" style="color:black"> GITHUB</button>
+                </a>
+            </div><!--hero-left-->
+
+            <div class="col-sm-6 col-sm-6 ipad">
+                <img class="ipad-screen img-responsive" src="https://github-readme-stats.vercel.app/api?username=<%= Data.ID %>&show_icons=true&hide_border=true"/>
+            </div>
+
+        </div><!--hero-->
+
+    </div> <!--hero-container-->
+
+</div><!--hero-background-->
+
+
+<!-- Features
+  ================================================== -->
+
+<div id="stacks" class="features-section">
+
+    <div class="features-container row">
+
+        <h2 class="features-headline light">주력 언어 및 기술</h2>
+        <% Data.Stacks.forEach(function(StackItem){ %>
+            <div class="col-sm-4 feature">
+                <div class="single-chart">
+                    <img class="chartImage" src="UserAssets/<%- StackItem.Image %>"></img>
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                      <path class="circle-bg"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path class="circle"
+                        stroke-dasharray="<%= StackItem.SkillPercent %>, 100"
+                        d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                    </svg>
+                </div>
+                <h5 class="feature-head-text feature-no-display"> <%- StackItem.Title %> </h5>
+                <p class="feature-subtext light feature-no-display"> <%- StackItem.Description %> </p>
+            </div>
+        <% }) %>
+
+    </div> <!--features-container-->
+</div> <!--features-section-->
+
+
+<!-- Projects
+  ================================================== -->
+
+<div id="project" class="team" style="padding-bottom: 0px;">
+    <h2 class="team-section-header light text-center">대규모 Projects</h2>
+    <div class="team-container row">
+
+        <% Data.Projects.Large.forEach(function(Project){ %> 
+            <div class="col-sm-4 team-member Card">
+                <img class="CardOverlayImage" src="UserAssets/<%- Project.CoverImage %>">
+                <hr>
+                <div class="team-member-text">
+                    <h3 class="team-member-position bold" style="color: black;"><%- Project.Title %></h4>
+                    <h5 class="light" style="color: gray;"><%- Project.SubTitle %></h5>
+                    <p class="light infoFont"><%- Project.Description %></p>
+                    <ul>
+                        <% Project.RoleList.forEach(function(Item){ %> 
+                            <li><%- Item %></li>
+                        <% }) %>
+                    </ul>
+
+                    <% Project.Links.forEach(function(Item){ %> 
+                        <a href="<%- Item.URL %>"><img class="ProjectIcon" src="UserAssets/<%- Item.Icon %>"></a>
+                    <% }) %>
+                    
+                </div>
+            </div>
+        <% }) %>
+
+
+    </div> <!--team-container--->
+
+</div> <!--team-section--->
+
+<hr>
+
+<div id="team" class="team" style="padding-top: 10px;">
+    <h2 class="team-section-header light text-center">소규모 Projects</h2>
+    <div class="team-container row">
+
+        <% Data.Projects.Small.forEach(function(Project){ %> 
+            <div class="col-sm-4 team-member Card">
+                <img class="CardOverlayImage" src="UserAssets/<%- Project.CoverImage %>">
+                <hr>
+                <div class="team-member-text">
+                    <h3 class="team-member-position bold" style="color: black;"><%- Project.Title %></h4>
+                    <h5 class="light" style="color: gray;"><%- Project.SubTitle %></h5>
+                    <p class="light infoFont"><%- Project.Description %></p>
+                    <ul>
+                        <% Project.RoleList.forEach(function(Item){ %> 
+                            <li><%- Item %></li>
+                        <% }) %>
+                    </ul>
+
+                    <% Project.Links.forEach(function(Item){ %> 
+                        <a href="<%- Item.URL %>"><img class="ProjectIcon" src="UserAssets/<%- Item.Icon %>"></a>
+                    <% }) %>
+                    
+                </div>
+            </div>
+        <% }) %>
+
+    </div> <!--team-container--->
+
+</div> <!--team-section--->
+
+<hr>
+
+<div id="team" class="team" style="padding-top: 10px;">
+    <h2 class="team-section-header light text-center">Contributed Projects</h2>
+    <div class="team-container row">
+
+        <% Data.Projects.Contributed.forEach(function(Project){ %> 
+            <div class="col-sm-4 team-member Card">
+                <img class="CardOverlayImage" src="UserAssets/<%- Project.CoverImage %>">
+                <hr>
+                <div class="team-member-text">
+                    <h3 class="team-member-position bold" style="color: black;"><%- Project.Title %></h4>
+                    <h5 class="light" style="color: gray;"><%- Project.SubTitle %></h5>
+                    <p class="light infoFont"><%- Project.Description %></p>
+                    <ul>
+                        <% Project.RoleList.forEach(function(Item){ %> 
+                            <li><%- Item %></li>
+                        <% }) %>
+                    </ul>
+
+                    <% Project.Links.forEach(function(Item){ %> 
+                        <a href="<%- Item.URL %>"><img class="ProjectIcon" src="UserAssets/<%- Item.Icon %>"></a>
+                    <% }) %>
+                    
+                </div>
+            </div>
+        <% }) %>
+
+    </div> <!--team-container--->
+
+</div> <!--team-section--->
+
+<!-- Footer
+  ================================================== -->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 webscope">
+                <span class="webscope-text"> A free template by Themewagon & WebScope</span>
+                <span class="webscope-text"> This Portfolio is made with <a href="https://github.com/VINTO1819/Beautyfolio">Beautyfolio</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
